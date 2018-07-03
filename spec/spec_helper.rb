@@ -1,7 +1,19 @@
 require "bundler/setup"
 require "item/crud"
+require 'rack/test'
+require 'rspec'
+
+ENV['RACK_ENV'] = 'test'
+
+require File.expand_path '../../item-crud.rb', __FILE__
+
+module RSpecMixin
+  include Rack::Test::Methods
+  def app() Sinatra::Application end
+end
 
 RSpec.configure do |config|
+	config.include RSpecMixin
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
