@@ -1,9 +1,13 @@
-RSpec.describe Item::Crud do
-  it "has a version number" do
-    expect(Item::Crud::VERSION).not_to be nil
-  end
+require 'item'
 
-  it "does something useful" do
-    expect(false).to eq(true)
+RSpec.describe Item do
+  it "insert item to database" do
+  	status, id = Item.create("item N")
+  	expect(status).to eq("OK")
+  end	
+
+  it "Nth item is exists" do
+  	status, id = Item.create("item N")
+    expect(Item.get(id)).to eq("item N")
   end
 end
