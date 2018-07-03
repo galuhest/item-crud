@@ -6,7 +6,8 @@ configure do
     require File.basename(lib, '.*') 
   }
 end
-
+# Program ini adalah aplikasi webapp untuk
+# library Item. 
 get '/' do
 	"Hello World!"
 end

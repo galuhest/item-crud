@@ -7,8 +7,10 @@ ENV['RACK_ENV'] = 'test'
 
 require File.expand_path '../../item-crud.rb', __FILE__
 
+# Module ini akan mengintegrasikan sinatra agar bisa di test
 module RSpecMixin
   include Rack::Test::Methods
+  # Function untuk mengintegrasikan sinatra
   def app() Sinatra::Application end
 end
 
