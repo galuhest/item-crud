@@ -14,8 +14,8 @@ end
 
 get '/item/:id' do |id|
 	content_type :json
-	name = Item.get(id)
-	response = {:status => 'OK', :name => name}
+	names = Item.get(id)
+	response = {:status => 'OK', :name => names}
 	response.to_json
 end
 
