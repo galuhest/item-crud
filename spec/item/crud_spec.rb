@@ -8,16 +8,16 @@ RSpec.describe Item do
 
   it "Nth item is exists" do
   	status, id = Item.create("item N")
-    expect(Item.get(id)).to eq("item N")
+    expect(Item.get(id[0])).to eq("item N")
   end
 
   it "Update Nth item is successful" do
   	status, id = Item.create("item N")
-  	expect(Item.update(id, "item N new!")).to eq("OK")
+  	expect(Item.update(id[0], "item N new!")).to eq("OK")
   end
 
   it "Deleting Nth item is successful" do
   	status, id = Item.create("item N")
-  	expect(Item.delete(id)).to eq("OK")
+  	expect(Item.delete(id[0])).to eq("OK")
   end
 end
