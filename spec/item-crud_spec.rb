@@ -7,7 +7,7 @@ RSpec.describe "Item Webapp" do
 	end
 
 	it "returns user's name" do
-		get '/item/1'
+		get '/item/'
 		response =  response_body
 		# puts response
 		expect(response["status"]).to eq "OK"
