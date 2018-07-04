@@ -7,7 +7,7 @@ RSpec.describe Item do
 	end	
 
 	it "Nth item is exists" do
-		status, id = Item.create("item N") c
+		status, id = Item.create("item N")
 		expect(Item.get(id[0])).to eq("item N")
 	end
 
