@@ -10,8 +10,8 @@ module Item
 
 		# Membuat koneksi terhadap database
 		def self.connect
-		    #my = Mysql.new(hostname, username, password, databasename)  
-		    connection = Mysql.new('localhost', 'root', 'root', 'onboarding')
+	    #my = Mysql.new(hostname, username, password, databasename)  
+	    connection = Mysql.new('localhost', 'root', 'root', 'onboarding')
 		end
 
 		# Menghapus sebubah koneksi database
