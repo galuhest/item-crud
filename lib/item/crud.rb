@@ -23,7 +23,7 @@ module Item
 		# nama item berdasarkan id.
 		def self.get(id)
 			connection = connect()
-			id = id[0].to_i
+			id = id.to_i
 			query = connection.query("select * from item where id = #{id}")
 			name = ""
 			query.each_hash do |row|
@@ -51,7 +51,7 @@ module Item
 		# berdasarkan id. Function ini mengembalikan status dari operasi ini.
 		def self.update(id, name)
 			connection = connect()
-			query = connection.query("update item set name = \'#{name}\' where id = #{id[0].to_i}")
+			query = connection.query("update item set name = \'#{name}\' where id = #{id.to_i}")
 			close_connection(connection)
 			status = "OK"
 		end
@@ -60,7 +60,7 @@ module Item
 		# berdasarkan id. Function ini akan mengembalikan status dari operasi.
 		def self.delete(id)
 			connection = connect()
-			query = connection.query("delete from item where id = #{id[0].to_i}")
+			query = connection.query("delete from item where id = #{id.to_i}")
 			close_connection(connection)
 			status = "OK"
 		end
