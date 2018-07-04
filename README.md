@@ -5,7 +5,7 @@ h o
 ## Dependencies
 
 * Ruby 2.3.1
-* Mysql
+* Mysql 5.7
 
 ## Installation
 
