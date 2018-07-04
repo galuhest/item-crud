@@ -1,4 +1,5 @@
 require 'item/crud'
+require "dotenv/load"
 # Module ini melakukan program crud sederhana
 # yang dilakukan terhadap tabel item. Library
 # Crud digunakan sebagai wrapper database.

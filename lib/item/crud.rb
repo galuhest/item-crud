@@ -1,6 +1,5 @@
 require "item/crud/version"
 require 'mysql'
-require_relative "../../env"
 
 module Item
   # Module ini adalah bagian dari module Item
@@ -8,9 +7,9 @@ module Item
   # terhadap database
   module Crud
     # Membuat koneksi terhadap database
-    def self.connect  
-      connection = Mysql.new(ENV['DB_HOST'], ENV['DB_USER'], ENV['DB_PASSWORD'], ENV['DATABASE'])
-    end
+    def self.connect
+      connection = Mysql.new(ENV['DB_HOST'], ENV["DB_USER"], ENV["DB_PASSWORD"], ENV["DATABASE"])
+    end 
 
     # Menghapus sebubah koneksi database
     def self.close_connection(connection)
