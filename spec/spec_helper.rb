@@ -2,7 +2,6 @@ require "bundler/setup"
 require "item/crud"
 require 'rack/test'
 require 'rspec'
-require "factory_bot"
 require "dotenv/load"
 
 ENV['RACK_ENV'] = 'test'
