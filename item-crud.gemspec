@@ -39,4 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sinatra"
   spec.add_development_dependency "rack-test"
   spec.add_development_dependency "dotenv"
+  spec.add_development_dependency "factory_bot", "~> 4.0"
 end
