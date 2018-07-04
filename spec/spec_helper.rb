@@ -19,7 +19,7 @@ end
 # saat test dilakukan. 
 module ItemDB
   # Memasukan user baru kedalam db untuk keperluan test
-  def createUser(name)
+  def create_user(name)
     connection = Mysql.new(ENV['DB_HOST'], ENV["DB_USER"], ENV["DB_PASSWORD"], ENV["DATABASE"])
     item = connection.query("insert into item (name) values (\'#{name}\')")
     query = connection.query('SELECT LAST_INSERT_ID()') 
