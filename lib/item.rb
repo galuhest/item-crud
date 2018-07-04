@@ -3,7 +3,6 @@ require 'item/crud'
 # yang dilakukan terhadap tabel item. Library
 # Crud digunakan sebagai wrapper database.
 module Item
-
 	# Mendapatkan nama item dari ID item tersebut
 	def self.get(id)
 		item = Crud.get(id)
