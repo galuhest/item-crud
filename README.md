@@ -1,8 +1,11 @@
 # Item::Crud
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/item/crud`. To experiment with that code, run `bin/console` for an interactive prompt.
+h o
+## Dependencies
 
-TODO: Delete this and the text above, and describe your gem
+* Ruby 2.3.1
+* Mysql 5.7
 
 ## Installation
 

@@ -1,4 +1,5 @@
 require 'item'
+require "dotenv/load"
 
 RSpec.describe Item do
 	it "insert item to database" do

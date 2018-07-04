@@ -1,7 +1,6 @@
 require "item/crud/version"
 require 'mysql'
 
-
 module Item
   # Module ini adalah bagian dari module Item
   # yang bertujuan untuk bertindak sebagai wrapper
@@ -9,9 +8,8 @@ module Item
   module Crud
     # Membuat koneksi terhadap database
     def self.connect
-      #my = Mysql.new(hostname, username, password, databasename)  
-      connection = Mysql.new('localhost', 'root', 'root', 'onboarding')
-    end
+      connection = Mysql.new(ENV['DB_HOST'], ENV["DB_USER"], ENV["DB_PASSWORD"], ENV["DATABASE"])
+    end 
 
     # Menghapus sebubah koneksi database
     def self.close_connection(connection)
