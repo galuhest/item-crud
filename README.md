@@ -10,3 +10,8 @@ h o
 ## Installation
 	bundle install
 to install all project dependencies
+
+## Environment variables
+edit or create `.env.PHASE` for your current project phase.
+For example, during test create
+`.env.test` and change ENIRONMENT variable in `.env` to `test`.

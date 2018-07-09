@@ -1,9 +1,14 @@
 require 'item/crud'
-require "dotenv/load"
+require 'dotenv'
 # Module ini melakukan program crud sederhana
 # yang dilakukan terhadap tabel item. Library
 # Crud digunakan sebagai wrapper database.
 module Item
+  Dotenv.load('.env')
+  if (ENV['ENVIRONMENT'] != "production")
+    puts ".env.#{ENV['ENVIRONMENT']}"
+    Dotenv.overload(".env.#{ENV['ENVIRONMENT']}")
+  end
   # Mendapatkan nama item dari ID item tersebut
   def self.get(id)
     item = Crud.get(id)

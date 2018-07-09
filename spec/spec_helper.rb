@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "item/crud"
 require 'rspec'
-require "dotenv/load"
+require 'dotenv'
 
 ENV['RACK_ENV'] = 'test'
 
