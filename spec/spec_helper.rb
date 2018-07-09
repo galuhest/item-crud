@@ -1,19 +1,9 @@
 require "bundler/setup"
 require "item/crud"
-require 'rack/test'
 require 'rspec'
 require "dotenv/load"
 
 ENV['RACK_ENV'] = 'test'
-
-require File.expand_path '../../item-crud.rb', __FILE__
-
-# Module ini akan mengintegrasikan sinatra agar bisa di test
-module RSpecMixin
-  include Rack::Test::Methods
-  # Function untuk mengintegrasikan sinatra
-  def app() Sinatra::Application end
-end
 
 # Module ini digunakan untuk memanipulasi DB
 # saat test dilakukan. 
@@ -33,7 +23,6 @@ module ItemDB
 end
 
 RSpec.configure do |config|
-  config.include RSpecMixin
   config.include ItemDB
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
